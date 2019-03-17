@@ -2,15 +2,17 @@
 
 const Antl = use('Antl')
 
-class ResetPassword {
+class User {
   get validateAll () {
     return true
   }
 
   get rules () {
     return {
-      token: 'required',
-      password: 'required|confirmed'
+      street: 'required',
+      city: 'required',
+      state: 'required',
+      number: 'number'
     }
   }
 
@@ -19,4 +21,4 @@ class ResetPassword {
   }
 }
 
-module.exports = ResetPassword
+module.exports = User
