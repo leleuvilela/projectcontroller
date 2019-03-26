@@ -12,6 +12,8 @@ Route.put('passwords', 'ForgotPasswordController.update').validator(
   'ResetPassword'
 )
 
+Route.get('testes', 'UserController.show')
+
 Route.get('files/:id', 'FileController.show')
 
 Route.group(() => {
