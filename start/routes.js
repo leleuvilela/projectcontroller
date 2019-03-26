@@ -3,6 +3,9 @@
 const Route = use('Route')
 
 Route.post('users', 'UserController.store').validator('User')
+
+Route.get('users/:id', 'UserController.show')
+
 Route.post('sessions', 'SessionController.store')
 
 Route.post('passwords', 'ForgotPasswordController.store').validator(
@@ -11,8 +14,6 @@ Route.post('passwords', 'ForgotPasswordController.store').validator(
 Route.put('passwords', 'ForgotPasswordController.update').validator(
   'ResetPassword'
 )
-
-Route.get('testes', 'UserController.show')
 
 Route.get('files/:id', 'FileController.show')
 
